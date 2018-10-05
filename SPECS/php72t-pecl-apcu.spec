@@ -21,7 +21,13 @@ URL: http://pecl.php.net/package/%{pecl_name}
 Source: http://pecl.php.net/get/%{pecl_name}-%{version}.tgz
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: %{php_base}-devel, %{php_base}-cli, %{php_base}-pear
+BuildRequires: %{php_base}-devel, %{php_base}-cli
+BuildRequires:  pear1u
+# explicitly require pear dependencies to avoid conflicts
+BuildRequires:  %{php_base}-cli
+BuildRequires:  %{php_base}-common
+BuildRequires:  %{php_base}-process
+BuildRequires:  %{php_base}-xml
 Requires(post): %{__pecl}
 Requires(postun): %{__pecl}
 
