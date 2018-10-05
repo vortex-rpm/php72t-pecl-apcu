@@ -89,7 +89,6 @@ fi
 
 %files
 %defattr(-, root, root, -)
-%doc %{pecl_name}-%{version}/CREDITS %{pecl_name}-%{version}/LICENSE %{pecl_name}-%{version}/README
 
 %config(noreplace) %{_sysconfdir}/php.d/%{pecl_name}.ini
 %{php_extdir}/%{pecl_name}.so
