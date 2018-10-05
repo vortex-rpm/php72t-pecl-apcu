@@ -39,6 +39,10 @@ Requires: %{php_base}-api = %{php_apiver}
 %endif
 
 
+%description
+extension package.
+
+
 %prep
 %setup -c -n %{real_name}-%{version} -q
 
